@@ -243,7 +243,7 @@ var loadProgram = function(gl, shaders, opt_attribs, opt_locations) {
  * @return {!WebGLShader} The created shader.
  */
 var createShaderFromScript = function(
-    gl, scriptId, opt_shaderType, opt_errorCallback) {
+  gl, scriptId, opt_shaderType, opt_errorCallback) {
   var shaderSource = "";
   var shaderType;
   var shaderScript = document.getElementById(scriptId);

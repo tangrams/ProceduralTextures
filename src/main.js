@@ -1,6 +1,6 @@
 var timeLoad = (new Date()).getTime();
 
-var fragShaderURL = window.location.hash.substr(1);
+var fragShaderURL = window.location.hash === "" ? "src/default.frag" : window.location.hash.substr(1);
 var canvas = document.getElementById("canvas");
 var gl = getWebGLContext(canvas);
 var program;
@@ -12,6 +12,9 @@ window.addEventListener("hashchange", function () {
 
 window.onload = function () { loadShader(), renderShader() };
 
+/*
+ *	Fetch for files
+ */
 function fetchHTTP(url, methood){
 	var request = new XMLHttpRequest(), response;
 
@@ -25,8 +28,10 @@ function fetchHTTP(url, methood){
 	return response;
 }
 
-function createShader(url, type) {
-	var source = fetchHTTP(url);
+/*
+ *	Create a Vertex of a specific type (gl.VERTEX_SHADER/)
+ */
+function createShader(source, type) {
 	var shader = gl.createShader(type);
 	gl.shaderSource(shader, source);
 	gl.compileShader(shader);
@@ -42,17 +47,33 @@ function createShader(url, type) {
   	return shader;
 }
 
+/*
+ *	Loads the vert/frag Shaders
+ */
 function loadShader() {
 	// setup GLSL program
-	var vertexShader = createShader("src/default.vert",gl.VERTEX_SHADER);
-	var fragmentShader = createShader(fragShaderURL,gl.FRAGMENT_SHADER);
+
+	var vertexShader = createShader(fetchHTTP("src/default.vert"),gl.VERTEX_SHADER);
+
+	var fragmentSource = fetchHTTP(fragShaderURL);
+	var fragmentHeader = "precision mediump float;\n\
+\n\
+uniform vec2 u_resolution;\n\
+uniform float u_time;\n\
+varying vec2 v_texcoord;\n";
+	var fragmentShader = createShader(fragmentHeader + fragmentSource,gl.FRAGMENT_SHADER);
+
+	var docBlock = document.getElementById("codeBlock");
+	docBlock.innerText = fragmentSource;
+
 	program = createProgram(gl, [vertexShader, fragmentShader]);
 	gl.useProgram(program);
 }
 
+/*
+ *	Render loop of shader in a canvas
+ */
 function renderShader() {
-	// Get A WebGL context
-
 	if (!gl) {
 		return;
 	}

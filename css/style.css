@@ -1,39 +1,7 @@
-html, body {
-  background-color: #aaa;
-  font-family: Sans-Serif;
-}
-
 canvas {
-  background-color: #fff;
-  border: 1px solid black;
-}
-
-#uiContainer {
   position: absolute;
-  top: 10px;
   right: 10px;
-  z-index: 3;
-}
-
-.gman-slider-label {
-  float: left;
-  gbackground-color: green;
-}
-.gman-slider-value {
-  float: right;
-  gbackground-color: blue;
-}
-.gman-slider-upper {
-  gbackground-color: yellow;
-  height: 1.5em;
-}
-.gman-slider-outer {
-  gbackground-color: purple;
-  height: 2.5em;
-}
-.gman-slider-slider {
-  font-size: x-small;
-  gbackground-color: red;
+  background-color: #fff;
 }
 
 /* styles to apply if in an iframe */
