@@ -64,8 +64,10 @@ varying vec2 v_texcoord;\n";
 	var fragmentShader = createShader(fragmentHeader + fragmentSource,gl.FRAGMENT_SHADER);
 
 	var docBlock = document.getElementById("codeBlock");
-	docBlock.innerText = fragmentSource;
-
+	if(docBlock){
+		docBlock.innerText = fragmentSource;
+	}
+	
 	program = createProgram(gl, [vertexShader, fragmentShader]);
 	gl.useProgram(program);
 }

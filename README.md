@@ -10,5 +10,5 @@ python -m SimpleHTTPServer
 
 2. Then open your WebBrowser on the address it said, usually ```http://0.0.0.0:8000```. 
 
-3. You will see the default fragment shader. To load a specify fragment file pass it as a hash tag. Ex: ```http://0.0.0.0:8000/#brick-05.frag```
+3. You will see the default fragment shader. To load a specify fragment file pass it as a hash tag. Ex: ```http://0.0.0.0:8000/render.html#textures/brick/05.frag```
 
