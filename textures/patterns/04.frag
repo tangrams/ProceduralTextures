@@ -22,15 +22,12 @@ void main(){
 
 	vec2 st = v_texcoord;
 
-	// st = tile(st,rows);
-	// float angle = PI*0.25*cos(u_time*0.5);
-	// if (fract(v_texcoord.y * 0.5 * rows) > 0.5){
- //        angle *= -1.0;
- //    }
-	// st = rotate2D(st,angle);
+	st = tile(st,rows);
 
 	st *= 2.0;
-	float pct = smoothstep( 0.9,0.91, pow( (st.x-1.0)*3.,st.y) );
+	st.x -= 1.0;
+	st.y -= 1.3;
+	float pct = smoothstep( 0.9,1.0, pow( st.x*6., st.y*0.7 ) );
 
 	vec3 color = vec3( pct );
 
