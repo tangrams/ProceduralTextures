@@ -27,21 +27,7 @@ body.iframe {
   overflow: hidden;
 }
 
-.iframe>.description {
-  display: none;
-}
-
-.iframe>canvas {
-  width: 100%;
-  height: 100%;
-}
-
 .iframe canvas {
-  border: none;
+  width: 200px;
+  height: 200px;
 }
-
-.iframe>#example {
-  width: 100%;
-  height: 100%;
-}
-
