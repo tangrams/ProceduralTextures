@@ -1,22 +1,24 @@
 # ProceduralTextures Repository
 
-This repository is a on-line gallery and tutorial for generative textures creaded completly with GLSL Shader code.
+### This repository is a on-line gallery and tutorial for generative textures creaded completely with GLSL Shader code.
 
 ## Install
 
-- Clone this repository locally and run a Python Simple HTTP Server.
+* Clone this repository locally and run a Python Simple HTTP Server.
 
-```    
-    git clone https://github.com/tangrams/ProceduralTextures
-    cd ProceduralTextures
-    python -m SimpleHTTPServer
+```
+git clone https://github.com/tangrams/ProceduralTextures
+cd ProceduralTextures
+python -m SimpleHTTPServer
 ```
 
-- Then open your WebBrowser on the address it said, usually ```[http://0.0.0.0:8000](http://0.0.0.0:8000)``` . 
+* Then open your WebBrowser on the address it said, usually by typing 
+
+```open [http://localhost:8000/](http://0.0.0.0:8000)```
 
 ## Content
 
-* Shapes
+#### Shapes
 
 <a href="code.html#shapes/box.frag" target="_blank">
     <canvas src="shapes/box.frag"></canvas>
@@ -25,7 +27,7 @@ This repository is a on-line gallery and tutorial for generative textures creade
     <canvas src="shapes/circle.frag"></canvas>
 </a>
 
-* Patterns
+#### Patterns
 
 <a href="code.html#patterns/00.frag" target="_blank">
     <canvas src="patterns/00.frag"></canvas>
@@ -43,7 +45,7 @@ This repository is a on-line gallery and tutorial for generative textures creade
     <canvas src="patterns/04.frag"></canvas>
 </a>
 
-* Animations
+#### Animations
 
 <a href="code.html#animations/00.frag" target="_blank">
     <canvas src="animations/00.frag"></canvas>
