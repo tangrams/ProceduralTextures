@@ -13,7 +13,7 @@
     }
 </style>
 
-## How to make a brick wall?
+# How to make a brick wall?
 
 #### The basics
 
