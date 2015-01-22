@@ -1,7 +1,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 110%;
     margin-bottom: 40px;
     line-height: 1.4em;
     color: #444;
@@ -10,12 +10,15 @@ body {
 }
 
 h1 {
-    color: #d4645c;
+    /*color: #d4645c;*/
     font-weight: 600;
     font-size: 200%;
     letter-spacing: 1px;
     padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
+    background-color: #d4645c;
+    color: white;
 }
 
 h2 {
@@ -46,7 +49,7 @@ canvas {
     height: 100px;
     margin-right: 20px;
     border: 4px solid #000;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 canvas:hover {
