@@ -1,3 +1,30 @@
+<style>
+    canvas {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border: 4px solid #000;
+        border-radius: 6px;
+    }
+
+    canvas:hover {
+        border: 4px solid #6ea0a4;
+    }
+
+    code { 
+        display: block;
+        font-family: "Courier New",monospace;
+        font-size: 20px;
+        line-height: 1.4em;
+        color: #333;
+        word-break: break-all;
+        word-wrap: break-word;
+        background-color: #eaeaea;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+</style>
+
 # Procedural Textures Repository
 
 This repository is a on-line gallery and tutorial for generative textures creaded completely with GLSL Shader code.
@@ -14,7 +41,11 @@ python -m SimpleHTTPServer
 
 * Then open your WebBrowser on the address it said, usually at [http://localhost:8000/](http://0.0.0.0:8000)
 
-## Content
+## Tutorials
+
+* [How to make a brick wall?](index.html#tutorial-brick/README.md)
+
+## Gallery
 
 #### Shapes
 

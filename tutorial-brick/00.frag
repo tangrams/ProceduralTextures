@@ -7,7 +7,8 @@ void main() {
 
 	//	In this case v_texcoor is the same as the fragment coordinate ( also
 	//	know as gl_FragCoord that goes between 0-200 in each axis ) 
-	//	devided by the resolution ( 200, 200 ) given by the uniform u_resolution
+	//	devided by the resolution ( 200, 200 ) given by the uniform
+	//	name u_resolution
 	//	
 	//	st = gl_FragCoord.xy/u_resolution.xy;
 	
