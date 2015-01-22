@@ -1,17 +1,16 @@
-#ProceduralTextures Repository
+# ProceduralTextures Repository
 
 This repository is a on-line gallery and tutorial for generative textures creaded completly with GLSL Shader code.
 
 ## Install
 
-- Clone this repository locally and run a Python Simple HTTP Server
+- Clone this repository locally and run a Python Simple HTTP Server.
 
-``` bash
-git clone https://github.com/tangrams/ProceduralTextures
-cd ProceduralTextures
-python -m SimpleHTTPServer
-
-``` 
+```    
+    git clone https://github.com/tangrams/ProceduralTextures
+    cd ProceduralTextures
+    python -m SimpleHTTPServer
+```
 
 - Then open your WebBrowser on the address it said, usually ```http://0.0.0.0:8000```. 
 
@@ -61,7 +60,3 @@ python -m SimpleHTTPServer
 <a href="code.html#animations/04.frag" target="_blank">
     <canvas src="animations/04.frag" width="200" height="200"></canvas>
 </a>
-
-<pre><code src="animations/04.frag"></code></pre>
-
-
