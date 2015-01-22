@@ -11,11 +11,11 @@
         font-size: 100%;
         border-radius: 5px;
     }
-
 </style>
 
 ## How to make a brick wall?
 
+#### The basics
 
 <p>
 We start mapping directly the values of the UVs on X and Y to the red and green colors. This will give us a better understanding of what's going on.
@@ -40,5 +40,41 @@ While the top-right is the ```vec2(1.0,1.0)``` because the yellow color tell tha
 <p>
 Another thing we will notice is how all values are expressively defined as floats by adding thet ```.0``` to it. That's because the GLSL compiler don't have automatic casting. So if we instead of writing ```0.0``` or ```1.0``` we wrote ```0``` or ```1``` the compilation of the shader will give an error thinking that you are trying to pass an integer to a float.  
 </p>
+
+#### Making a grid 
+
+<div style="position: absolute; right: 10px;">
+    <canvas src="tutorial-brick/01.frag" style="width: 250px; height: 250px;"></canvas>
+</div>
+<div style="margin-right:15px">
+<pre><code src="tutorial-brick/01.frag" class="glsl lineNumbers"></code></pre>
+</div>
+
+#### Streaching those bricks
+
+<div style="position: absolute; right: 10px;">
+    <canvas src="tutorial-brick/02.frag" style="width: 250px; height: 250px;"></canvas>
+</div>
+<div style="margin-right:15px">
+<pre><code src="tutorial-brick/02.frag" class="glsl lineNumbers"></code></pre>
+</div>
+
+#### Running bond
+
+<div style="position: absolute; right: 10px;">
+    <canvas src="tutorial-brick/03.frag" style="width: 250px; height: 250px;"></canvas>
+</div>
+<div style="margin-right:15px">
+<pre><code src="tutorial-brick/03.frag" class="glsl lineNumbers"></code></pre>
+</div>
+
+#### Only the edges
+
+<div style="position: absolute; right: 10px;">
+    <canvas src="tutorial-brick/04.frag" style="width: 250px; height: 250px;"></canvas>
+</div>
+<div style="margin-right:15px">
+<pre><code src="tutorial-brick/04.frag" class="glsl lineNumbers"></code></pre>
+</div>
 
 
