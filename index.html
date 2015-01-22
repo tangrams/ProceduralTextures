@@ -6,91 +6,34 @@
 <link type="text/css" href="css/style.css" rel="stylesheet" />
 </head>
 <body>
+	<div id="content"> </div>
+	
+	<script type="text/javascript" src="http://simonwaldherr.github.io/micromarkdown.js/dist/micromarkdown.min.js"></script>
+	<script type="text/javascript" src="js/glslCanvas.js"></script>
+	<script>
+	
+		window.addEventListener("hashchange", function () {
+			loadMarkdown();
+			loadShaders();
+		}, false);
 
-	<table style="width:100%">
-		<tr>
-			<td>
-				<a class= "textureReference" href="code.html#textures/brick/05.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/brick/05.frag" width="200" height="200"></iframe>
-					<p> Brick </p>
-				</a>
-			</td>
-			<td>
-				<a class= "textureReference" href="code.html#textures/windows/00.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/windows/00.frag" width="200" height="200"></iframe>
-					<p> Windows </p>
-				</a>
-			</td>
-			<td>
-				<a class= "textureReference" href="code.html#textures/moon/00.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/moon/00.frag" width="200" height="200"></iframe>
-					<p> Moon </p>
-				</a>
-			</td>
-		</tr>
+		function loadMarkdown(){
+			var mdFileURL = window.location.hash.substr(1);
+			var mdText = "No **text**";
+			if(mdFileURL){
+				mdText = fetchHTTP(mdFileURL);
+			} else {
+				mdText = fetchHTTP("README.md");
+			}
+			content.innerHTML = micromarkdown.parse(mdText);
+		}
 
-		<tr>
-			<td>
-				<a class= "textureReference" href="code.html#textures/animation/00.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/animation/00.frag" width="200" height="200"></iframe>
-					<p> Tile Animation 00 </p>
-				</a>
-			</td>
+		window.onload = function(){
+			loadMarkdown();
 
-			<td>
-				<a class= "textureReference" href="code.html#textures/animation/01.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/animation/01.frag" width="200" height="200"></iframe>
-					<p> Tile Animation 01 </p>
-				</a>
-			</td>
-			<td>
-				<a class= "textureReference" href="code.html#textures/animation/02.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/animation/02.frag" width="200" height="200"></iframe>
-					<p> Polar Animation 00 </p>
-				</a>
-			</td>
-		</tr>
-
-		<tr>
-			<td>
-				<a class= "textureReference" href="code.html#textures/animation/03.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/animation/03.frag" width="200" height="200"></iframe>
-					<p> Polar Animation 01 </p>
-				</a>
-			</td>
-			<td>
-				<a class= "textureReference" href="code.html#textures/patterns/00.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/patterns/00.frag" width="200" height="200"></iframe>
-					<p> Tile patterns 00 </p>
-				</a>
-			</td>
-			<td>	
-				<a class= "textureReference" href="code.html#textures/patterns/01.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/patterns/01.frag" width="200" height="200"></iframe>
-					<p> Tile patterns 01 </p>
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a class= "textureReference" href="code.html#textures/patterns/02.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/patterns/02.frag" width="200" height="200"></iframe>
-					<p> Tile patterns 02 </p>
-				</a>
-			</td>
-			<td>
-				<a class= "textureReference" href="code.html#textures/patterns/03.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/patterns/03.frag" width="200" height="200"></iframe>
-					<p> Tile patterns 03 </p>
-				</a>
-			</td>
-			<td>
-				<a class= "textureReference" href="code.html#textures/patterns/04.frag" target="_blank">
-					<iframe class="texture" src="render.html#textures/patterns/04.frag" width="200" height="200"></iframe>
-					<p> Tile patterns 04 </p>
-				</a>
-			</td>
-		</tr>
-	</table>
+			loadShaders();
+			renderShaders(); 
+		};
+	</script>
 </body>
 </html>

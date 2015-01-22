@@ -25,7 +25,7 @@ float circle(vec2 _st, float _radius){
 
 void main() {
 	vec2 st = v_texcoord;
-	st = radialTile(st,vec2(u_time,u_time*-0.3),5.0);
+	st = radialTile(st,vec2(u_time,u_time*-0.3),6.0);
 
 	// vec3 color = vec3(st,0.0);
 	vec3 color = vec3(circle(st , (1.+sin(u_time)*0.3)*0.5) );

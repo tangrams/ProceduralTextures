@@ -4,16 +4,38 @@
 <meta charset="utf-8">
 <title>GLSL Shader Code</title>
 <link type="text/css" href="css/style.css" rel="stylesheet" />
-
 </head>
 <body>
-	<canvas id="canvas" class="right" width="500" height="500"></canvas>
+	<canvas class="right" width="500" height="500"></canvas>
 
 	<pre><code id="codeBlock">
 code here
 	</code></pre>
 
-	<script type="text/javascript" src="src/webgl-utils.js"></script>
-	<script type="text/javascript" src="src/render-main.js" defer></script>
+	<script type="text/javascript" src="js/glslCanvas.js" defer></script>
+	<script type="text/javascript">
+		window.addEventListener("hashchange", function () {
+			var fragShaderURL = window.location.hash.substr(1);
+
+			var docBlock = document.getElementById("codeBlock");
+			if(docBlock){
+				docBlock.innerText = fetchHTTP(fragShaderURL);
+			}
+
+			loadShaders(fragShaderURL);
+		}, false);
+
+		window.onload = function () { 
+			var fragShaderURL = window.location.hash === "" ? "js/default.frag" : window.location.hash.substr(1);
+			loadShaders(fragShaderURL);
+
+			var docBlock = document.getElementById("codeBlock");
+			if(docBlock){
+				docBlock.innerText = fetchHTTP(fragShaderURL);
+			}
+
+			renderShaders(); 
+		};
+	</script>
 </body>
 </html>
