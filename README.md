@@ -12,9 +12,7 @@ cd ProceduralTextures
 python -m SimpleHTTPServer
 ```
 
-* Then open your WebBrowser on the address it said, usually by typing 
-
-```open [http://localhost:8000/](http://0.0.0.0:8000)```
+* Then open your WebBrowser on the address it said, usually at [http://localhost:8000/](http://0.0.0.0:8000)
 
 ## Content
 
