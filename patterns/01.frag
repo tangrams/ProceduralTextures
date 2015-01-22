@@ -24,7 +24,7 @@ void main(void){
 
     st = brickTile(st,5.0);
     
-    vec3 color = vec3(box(st,vec2(0.9)));
+    vec3 color = vec3(box(st,vec2(0.95)));
 
     gl_FragColor = vec4(color,1.0);    
 }

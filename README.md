@@ -4,17 +4,16 @@ This repository is a on-line gallery and tutorial for generative textures creade
 
 ## Install
 
-Clone this repository locally and run a Python Simple HTTP Server
+- Clone this repository locally and run a Python Simple HTTP Server
 
-
-```bash
+``` bash
 git clone https://github.com/tangrams/ProceduralTextures
 cd ProceduralTextures
 python -m SimpleHTTPServer
+
 ``` 
 
-
-Then open your WebBrowser on the address it said, usually ```http://0.0.0.0:8000```. 
+- Then open your WebBrowser on the address it said, usually ```http://0.0.0.0:8000```. 
 
 ## Content
 
@@ -63,5 +62,6 @@ Then open your WebBrowser on the address it said, usually ```http://0.0.0.0:8000
     <canvas src="animations/04.frag" width="200" height="200"></canvas>
 </a>
 
+<pre><code src="animations/04.frag"></code></pre>
 
 

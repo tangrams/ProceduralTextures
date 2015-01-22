@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Gallery</title>
-<link type="text/css" href="css/style.css" rel="stylesheet" />
-</head>
-<body>
-	<div id="content"> </div>
-	
-	<script type="text/javascript" src="http://simonwaldherr.github.io/micromarkdown.js/dist/micromarkdown.min.js"></script>
-	<script type="text/javascript" src="js/glslCanvas.js"></script>
-	<script>
-	
-		window.addEventListener("hashchange", function () {
-			loadMarkdown();
-			loadShaders();
-		}, false);
+	<head>
+		<meta charset="utf-8">
+		<title>ProceduralTextures</title>
+		<style>
+		</style>
 
-		function loadMarkdown(){
-			var mdFileURL = window.location.hash.substr(1);
-			var mdText = "No **text**";
-			if(mdFileURL){
-				mdText = fetchHTTP(mdFileURL);
-			} else {
-				mdText = fetchHTTP("README.md");
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/zenburn.css">
+		<script src="src/highlight.min.js"></script>
+		<script type="text/javascript" src="src/glslCanvas.js" defer></script>
+
+		<style>
+			body {
+	  			font-family: 'Roboto Condensed', sans-serif;
 			}
-			content.innerHTML = micromarkdown.parse(mdText);
-		}
 
-		window.onload = function(){
-			loadMarkdown();
+		</style>
+	</head>
+	<body>
+		<div id="content"> </div>
+		
+		<script type="text/javascript" src="http://simonwaldherr.github.io/micromarkdown.js/dist/micromarkdown.min.js"></script>
+		<script type="text/javascript" src="src/glslCanvas.js"></script>
+		<script>
+			window.addEventListener("hashchange", function () {
+				loadMarkdown();
+				loadShaders();
+			}, false);
 
-			loadShaders();
-			renderShaders(); 
-		};
-	</script>
-</body>
+			function loadMarkdown(){
+				var mdFileURL = window.location.hash.substr(1);
+				var mdText = "No **text**";
+				if(mdFileURL){
+					mdText = fetchHTTP(mdFileURL);
+				} else {
+					mdText = fetchHTTP("README.md");
+				}
+				content.innerHTML = micromarkdown.parse(mdText);
+
+				// Load codes tags that have "src" attributes
+				var list = document.getElementsByTagName("code");
+				for(var i = 0; i < list.length; i++){
+					if(list[i].hasAttribute("src")){
+						list[i].innerHTML = fetchHTTP(list[i].getAttribute("src"));
+						hljs.highlightBlock(list[i]);
+					}
+				}
+			}
+
+			window.onload = function(){
+				loadMarkdown();
+
+				loadShaders();
+				renderShaders(); 
+			};
+		</script>
+	</body>
 </html>

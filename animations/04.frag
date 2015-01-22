@@ -8,14 +8,6 @@ vec2 rotate2D(vec2 _st, float _angle){
     return _st;
 }
 
-vec2 tile(vec2 _st, float _zoom){
-    _st *= _zoom;
-    if (fract(_st.y * 0.5) > 0.5){
-        _st.x += 0.5;
-    }
-    return fract(_st);
-}
-
 vec2 movingTiles(vec2 _st, float _zoom, float _speed){
     _st *= _zoom;
     float time = u_time*_speed;
@@ -45,8 +37,8 @@ float box(vec2 _st, vec2 _size, float _smoothEdges){
 
 void main(void){
     vec2 st = v_texcoord;
-    st = movingTiles(st,4.,0.25);
-    st = rotate2D(st,PI* (1.+cos(u_time*0.5))*0.5 );
-    vec3 color = vec3(box(st,vec2( (1.0+cos(u_time*0.5)*0.7)*0.5 ),0.01));
+    st = movingTiles(st,5.,0.25);
+    st = rotate2D(st,PI* (1.+cos(u_time*0.25))*0.5 );
+    vec3 color = vec3(box(st,vec2( 0.5+(1.0+cos(u_time)*0.8)*0.25 ),0.01));
     gl_FragColor = vec4(color,1.0);    
 }

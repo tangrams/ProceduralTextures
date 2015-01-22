@@ -220,7 +220,7 @@ function createShader( _gl, _source, _type) {
  *	Loads the vert/frag Shaders
  */
 function loadShader( _gl, _fragShaderURL ) {
-	var vertexShader = createShader(_gl, fetchHTTP("js/default.vert"), _gl.VERTEX_SHADER);
+	var vertexShader = createShader(_gl, fetchHTTP("src/default.vert"), _gl.VERTEX_SHADER);
 
 	var fragmentSource = fetchHTTP( _fragShaderURL );
 	var fragmentHeader = "precision mediump float;\n\

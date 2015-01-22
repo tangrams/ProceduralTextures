@@ -2,7 +2,7 @@
 
 float rows = 10.0;
 
-vec2 tile(vec2 _st, float _zoom){
+vec2 brickTile(vec2 _st, float _zoom){
     _st *= _zoom;
     if (fract(_st.y * 0.5) > 0.5){
         _st.x += 0.5;
@@ -21,7 +21,7 @@ vec2 rotate2D(vec2 _st, float _angle){
 void main(){
 
 	vec2 st = v_texcoord;
-	st = tile(st,rows);
+	st = brickTile(st,rows);
 
 	float angle = PI*0.25*cos(u_time*0.5);
 

@@ -1,8 +1,5 @@
 vec2 tile(vec2 _st, float _zoom){
     _st *= _zoom;
-    // if (fract(_st.y * 0.5) > 0.5){
-    //     _st.x += 0.5;
-    // }
     return fract(_st);
 }
 

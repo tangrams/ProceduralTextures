@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>GLSL Shader Code</title>
-<link type="text/css" href="css/style.css" rel="stylesheet" />
-</head>
-<body>
-	<canvas class="right" width="500" height="500"></canvas>
+	<head>
+		<meta charset="utf-8">
+		<title>GLSL Shader Code</title>
 
-	<pre><code id="codeBlock">
-code here
-	</code></pre>
-
-	<script type="text/javascript" src="js/glslCanvas.js" defer></script>
-	<script type="text/javascript">
-		window.addEventListener("hashchange", function () {
-			var fragShaderURL = window.location.hash.substr(1);
-
-			var docBlock = document.getElementById("codeBlock");
-			if(docBlock){
-				docBlock.innerText = fetchHTTP(fragShaderURL);
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/zenburn.css">
+		<style>
+			body {
+	  			background: #3f3f3f;
+	  			font-family: 'Inconsolata';
+	  			margin: 0; padding: 0;
 			}
 
-			loadShaders(fragShaderURL);
-		}, false);
+			pre {
+			  margin: 0;
+			  font-family: 'Inconsolata';
+			  font-size: medium;
+			}
+			
+			canvas.right {
+			  position: absolute;
+			  right: 10px;
+			  background-color: #fff;
+			}
+		</style>
+		
+		
+		<script src="src/highlight.min.js"></script>
+		<script type="text/javascript" src="src/glslCanvas.js" defer></script>
+	</head>
+	<body>
+		<canvas class="right" width="500" height="500"></canvas>
 
-		window.onload = function () { 
-			var fragShaderURL = window.location.hash === "" ? "js/default.frag" : window.location.hash.substr(1);
-			loadShaders(fragShaderURL);
+		<pre><code id="codeBlock" class="glsl">
+	code here
+		</code></pre>
 
-			var docBlock = document.getElementById("codeBlock");
-			if(docBlock){
-				docBlock.innerText = fetchHTTP(fragShaderURL);
+		<script type="text/javascript">
+			window.addEventListener("hashchange", function () {
+				loadTag()
+			}, false);
+
+			function loadTag(){
+				var fragShaderURL = window.location.hash === "" ? "src/default.frag" : window.location.hash.substr(1);
+				loadShaders(fragShaderURL);
+
+				var docBlock = document.getElementById("codeBlock");
+				if(docBlock){
+					docBlock.innerHTML = fetchHTTP(fragShaderURL);
+					hljs.highlightBlock(docBlock);
+				}
 			}
 
-			renderShaders(); 
-		};
-	</script>
-</body>
+			window.onload = function () { 
+				loadTag();
+				renderShaders(); 
+			};
+		</script>
+	</body>
 </html>
