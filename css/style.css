@@ -6,3 +6,9 @@ h1 {
 	color: white;
 	background: #F00;
 }
+
+canvas {
+	border-radius: 10px;
+	width: 100px;
+	height: 100px;
+}
