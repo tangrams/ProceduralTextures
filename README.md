@@ -14,7 +14,7 @@ python -m SimpleHTTPServer
 
 * Then open your WebBrowser on the address it said, usually at [http://localhost:8000/](http://0.0.0.0:8000)
 
-## Gallery
+## Content
 
 #### Shapes
 
