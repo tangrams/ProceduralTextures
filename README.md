@@ -28,7 +28,9 @@ python -m SimpleHTTPServer
 <canvas onclick="viewShader('patterns/bricks.frag');" src="patterns/bricks.frag"></canvas>
 <canvas onclick="viewShader('patterns/sidegrid.frag');" src="patterns/sidegrid.frag"></canvas>
 <canvas onclick="viewShader('patterns/checks.frag');" src="patterns/checks.frag"></canvas>
+<canvas onclick="viewShader('patterns/diamond.frag');" src="patterns/diamond.frag"></canvas>
 <canvas onclick="viewShader('patterns/nuts.frag');" src="patterns/nuts.frag"></canvas>
+
 
 #### Animations
 
