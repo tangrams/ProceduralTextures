@@ -3,56 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<title>ProceduralTextures</title>
-		<style>
-		</style>
 
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-		
-		<link rel="stylesheet" href="css/zenburn.css">
-		<script src="src/highlight.min.js"></script>
-		<script type="text/javascript" src="src/glslCanvas.js" defer></script>
+		<link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' >
+		<link type='text/css' rel='stylesheet' href="css/zenburn.css">
+		<link type='text/css' rel='stylesheet' href="css/style.css">
 
-		<link href="css/style.css" rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="/src/highlight.min.js"></script>
+		<script type="text/javascript" src="/src/glslCanvas.js"></script>
+		<script type="text/javascript" src="/src/marked.js"></script>
 
 		</style>
 	</head>
 	<body>
 		<div id="content"> </div>
-		
-		<script type="text/javascript" src="http://simonwaldherr.github.io/micromarkdown.js/dist/micromarkdown.min.js"></script>
-		<script type="text/javascript" src="src/glslCanvas.js"></script>
-		<script>
-			window.addEventListener("hashchange", function () {
-				loadMarkdown();
-				loadShaders();
-			}, false);
-
-			function loadMarkdown(){
-				var mdFileURL = window.location.hash.substr(1);
-				var mdText = "No **text**";
-				if(mdFileURL){
-					mdText = fetchHTTP(mdFileURL);
-				} else {
-					mdText = fetchHTTP("README.md");
-				}
-				content.innerHTML = micromarkdown.parse(mdText);
-
-				// Load codes tags that have "src" attributes
-				var list = document.getElementsByTagName("code");
-				for(var i = 0; i < list.length; i++){
-					if(list[i].hasAttribute("src")){
-						list[i].innerHTML = fetchHTTP(list[i].getAttribute("src"));
-						hljs.highlightBlock(list[i]);
-					}
-				}
-			}
-
-			window.onload = function(){
-				loadMarkdown();
-
-				loadShaders();
-				renderShaders(); 
-			};
-		</script>
+		<script type="text/javascript" src="src/main.js" defer></script>
 	</body>
 </html>

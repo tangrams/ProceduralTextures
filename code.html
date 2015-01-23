@@ -4,35 +4,43 @@
 		<meta charset="utf-8">
 		<title>GLSL Shader Code</title>
 
-		<link rel="stylesheet" href="css/zenburn.css">
+		<link type='text/css' rel='stylesheet' href="css/zenburn.css">
 		<style>
 			body {
 	  			background: #3f3f3f;
-	  			margin: 0; padding: 0;
+			}
+
+			h1 {
+				color: white;
+				font-family: Courier, Arial;
 			}
 
 			pre {
-			  margin: 0;
-			  font-size: medium;
+				font-size: medium;
 			}
 
 			canvas.right {
-			  position: absolute;
-			  right: 10px;
-			  background-color: #fff;
+				position: absolute;
+				right: 10px;
+				background-color: #fff;
 			}
 		</style>
 		
-		
-		<script src="src/highlight.min.js"></script>
-		<script type="text/javascript" src="src/glslCanvas.js" defer></script>
+		<script type="text/javascript" src="src/highlight.min.js"></script>
+		<script type="text/javascript" src="src/glslCanvas.js"></script>
 	</head>
 	<body>
+		<h1 id="title" >FILE NAME.frag</h1>
+
 		<canvas class="right" width="500" height="500"></canvas>
 
-		<pre><code id="codeBlock" class="glsl">
-	code here
-		</code></pre>
+		<pre>
+			<code id="codeBlock" class="glsl">
+				
+				code will be injected here
+
+			</code>
+		</pre>
 
 		<script type="text/javascript">
 			window.addEventListener("hashchange", function () {
@@ -42,6 +50,11 @@
 			function loadTag(){
 				var fragShaderURL = window.location.hash === "" ? "src/default.frag" : window.location.hash.substr(1);
 				loadShaders(fragShaderURL);
+
+				var title = document.getElementById("title");
+				if(title){
+					title.innerText = fragShaderURL;
+				}
 
 				var docBlock = document.getElementById("codeBlock");
 				if(docBlock){

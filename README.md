@@ -24,6 +24,9 @@ python -m SimpleHTTPServer
 <a href="code.html#shapes/circle.frag" target="_blank">
     <canvas src="shapes/circle.frag"></canvas>
 </a>
+<a href="code.html#shapes/cross.frag" target="_blank">
+    <canvas src="shapes/cross.frag"></canvas>
+</a>
 
 #### Patterns
 
