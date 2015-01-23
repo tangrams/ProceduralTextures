@@ -173,7 +173,7 @@ function createProgram(gl, shaders, opt_attribs, opt_locations) {
   if (!linked) {
 	  // something went wrong with the link
 	  lastError = gl.getProgramInfoLog (program);
-	  error("Error in program linking:" + lastError);
+	  console.log("Error in program linking:" + lastError);
 
 	  gl.deleteProgram(program);
 	  return null;
