@@ -1,6 +1,6 @@
 # Procedural Textures Repository
 
-This repository is a on-line gallery and tutorial for generative textures creaded completely with GLSL Shader code.
+This repository is a on-line gallery for generative textures creaded completely with GLSL Shader code.
 
 ## Install
 
