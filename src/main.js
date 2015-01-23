@@ -5,6 +5,7 @@ window.addEventListener("hashchange", function () {
 
 function loadMarkdown(){
 	var mdFileURL = window.location.hash.substr(1);
+	
 	var mdText = "No **text**";
 	if(mdFileURL){
 		mdText = fetchHTTP(mdFileURL);
