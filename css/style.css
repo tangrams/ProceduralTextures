@@ -1,7 +1,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 110%;
+    /*font-weight: 300;*/
+    /*font-size: 110%;*/
     margin-bottom: 40px;
     line-height: 1.4em;
     color: #444;
@@ -44,6 +44,19 @@ h4 {
     margin-bottom: 10px;
 }
 
+code { 
+    display: block;
+    font-family: "Courier New",monospace;
+    font-size: 90%;
+    line-height: 1.4em;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #eaeaea;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
 canvas {
     width: 100px;
     height: 100px;
@@ -56,15 +69,32 @@ canvas:hover {
     border: 4px solid #6ea0a4;
 }
 
-code { 
-    display: block;
-    font-family: "Courier New",monospace;
-    font-size: 20px;
-    line-height: 1.4em;
-    color: #333;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #eaeaea;
-    padding-left: 20px;
-    margin-top: 20px;
+canvas#demoCanvas{
+    position: absolute;
+    right: 10px;
+    width: 500px;
+    height: 500px;
 }
+
+code#demoCode{
+    position: absolute;
+    left:0px;
+    right:0px;
+    font-size: 90%;
+    padding-left: 20px
+}
+
+#demoBackground{
+    position: absolute;
+    left:0px;
+    right:0px;
+    width: 100%;
+    height: 700px;
+    background-color: #3f3f3f;
+    opacity: 50%;
+}
+
+.demo{
+    display: none;
+}
+

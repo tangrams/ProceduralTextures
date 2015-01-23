@@ -18,48 +18,22 @@ python -m SimpleHTTPServer
 
 #### Shapes
 
-<a href="code.html#shapes/box.frag" target="_blank">
-    <canvas src="shapes/box.frag"></canvas>
-</a>
-<a href="code.html#shapes/circle.frag" target="_blank">
-    <canvas src="shapes/circle.frag"></canvas>
-</a>
-<a href="code.html#shapes/cross.frag" target="_blank">
-    <canvas src="shapes/cross.frag"></canvas>
-</a>
+<canvas onclick="viewShader('shapes/box.frag');" src="shapes/box.frag"></canvas>
+<canvas onclick="viewShader('shapes/circle.frag');" src="shapes/circle.frag"></canvas>
+<canvas onclick="viewShader('shapes/cross.frag');"  src="shapes/cross.frag"></canvas>
 
 #### Patterns
 
-<a href="code.html#patterns/00.frag" target="_blank">
-    <canvas src="patterns/00.frag"></canvas>
-</a>
-<a href="code.html#patterns/01.frag" target="_blank">
-    <canvas src="patterns/01.frag"></canvas>
-</a>
-<a href="code.html#patterns/02.frag" target="_blank">
-    <canvas src="patterns/02.frag"></canvas>
-</a>
-<a href="code.html#patterns/03.frag" target="_blank">
-    <canvas src="patterns/03.frag"></canvas>
-</a>
-<a href="code.html#patterns/04.frag" target="_blank">
-    <canvas src="patterns/04.frag"></canvas>
-</a>
+<canvas onclick="viewShader('patterns/grid.frag');" src="patterns/grid.frag"></canvas>
+<canvas onclick="viewShader('patterns/bricks.frag');" src="patterns/bricks.frag"></canvas>
+<canvas onclick="viewShader('patterns/sidegrid.frag');" src="patterns/sidegrid.frag"></canvas>
+<canvas onclick="viewShader('patterns/checks.frag');" src="patterns/checks.frag"></canvas>
+<canvas onclick="viewShader('patterns/nuts.frag');" src="patterns/nuts.frag"></canvas>
 
 #### Animations
 
-<a href="code.html#animations/00.frag" target="_blank">
-    <canvas src="animations/00.frag"></canvas>
-</a>
-<a href="code.html#animations/01.frag" target="_blank">
-    <canvas src="animations/01.frag"></canvas>
-</a>
-<a href="code.html#animations/02.frag" target="_blank">
-    <canvas src="animations/02.frag"></canvas>
-</a>
-<a href="code.html#animations/03.frag" target="_blank">
-    <canvas src="animations/03.frag"></canvas>
-</a>
-<a href="code.html#animations/04.frag" target="_blank">
-    <canvas src="animations/04.frag"></canvas>
-</a>
+<canvas onclick="viewShader('animations/beatingdots.frag');" src="animations/beatingdots.frag"></canvas>
+<canvas onclick="viewShader('animations/movingdots.frag');" src="animations/movingdots.frag"></canvas>
+<canvas onclick="viewShader('animations/polardots.frag');" src="animations/polardots.frag"></canvas>
+<canvas onclick="viewShader('animations/rotatingdots.frag');" src="animations/rotatingdots.frag"></canvas>
+<canvas onclick="viewShader('animations/marchingboxes.frag');" src="animations/marchingboxes.frag"></canvas>

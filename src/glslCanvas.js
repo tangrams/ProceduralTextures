@@ -2,19 +2,15 @@ var timeLoad = (new Date()).getTime();
 
 var billboards = []; 
 
-function loadShaders( _url ) {
+function loadShaders() {
 	var list = document.getElementsByTagName("canvas");
 
 	// Load canvas and WebGLContexta
 	for(var i = 0; i < list.length; i++){
 		var shaderURL = "";
 
-		if ( _url ){
-			shaderURL = _url;
-		} else if( list[i].hasAttribute("src") ){
+		if( list[i].hasAttribute("src") ){
 			shaderURL = list[i].getAttribute('src');
-		} else if( list[i].hasAttribute("glsl-frag") ){
-			shaderURL = list[i].getAttribute('glsl-frag');
 		}
 
 		var c = list[i];
@@ -131,12 +127,12 @@ function setupWebGL (_canvas, _opt_attribs) {
  *     from. If one is not passed in one will be created.
  * @return {!WebGLContext} The created context.
  */
-function create3DContext(canvas, opt_attribs) {
+function create3DContext(_canvas, _opt_attribs) {
   var names = ["webgl", "experimental-webgl"];
   var context = null;
   for (var ii = 0; ii < names.length; ++ii) {
 	try {
-	  context = canvas.getContext(names[ii], opt_attribs);
+	  context = _canvas.getContext(names[ii], _opt_attribs);
 	} catch(e) {}
 	if (context) {
 	  break;
@@ -220,7 +216,7 @@ function createShader( _gl, _source, _type) {
  *	Loads the vert/frag Shaders
  */
 function loadShader( _gl, _fragShaderURL ) {
-	var vertexShader = createShader(_gl, fetchHTTP("src/default.vert"), _gl.VERTEX_SHADER);
+	var vertexShader = createShader(_gl, fetchHTTP("/src/default.vert"), _gl.VERTEX_SHADER);
 
 	var fragmentSource = fetchHTTP( _fragShaderURL );
 	var fragmentHeader = "precision mediump float;\n\
