@@ -1,13 +1,13 @@
 # Procedural Textures
 by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
 
-The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es) ) are excited on the possibilities of using OpenGL Shading Language for rendering maps. We use them on everything from geometry extrusion to light effects. 
+The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es)) are excited about the possibilities of using the OpenGL Shading Language to render maps. We use them for everything from geometry extrusion to lighting effects. 
 
-Another use of GLSL Shaders is for generating procedural textures on realtime. This allow mappers to make interesting patterns programmatically and apply them on different geometries  using custom rules.
+Another use of GLSL Shaders is for generating procedural textures in real time. This allows mappers to make interesting patterns programmatically and apply them to different geometries using custom rules.
 
-This [repository](http://github.com/tangrams/ProceduralTextures) and [on-line gallery](http://tangrams.github.io/ProceduralTextures/) shows a small collection of examples to inspire map makers to use, code and share generative textures for maps.
+This [repository](http://github.com/tangrams/ProceduralTextures) and [on-line gallery](http://tangrams.github.io/ProceduralTextures/) show a small collection of examples to inspire mapmakers to use, code and share generative textures for maps.
 
-## How to install this gallery in your local machine?
+## How to install this gallery on your local machine?
 
 * Clone this repository locally and run a Python HTTP Server.
 
@@ -17,7 +17,7 @@ cd ProceduralTextures
 python -m SimpleHTTPServer
 ```
 
-* Then open your WebBrowser on the address it said, usually at [http://localhost:8000/](http://localhost:8000)
+* Then open your web browser to [http://localhost:8000/](http://localhost:8000) (or the URL specified by the Python script, if different).
 
 ## Gallery
 
