@@ -1,8 +1,13 @@
-# Procedural Textures Repository
+# Procedural Textures
+by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
 
-This repository is an [on-line gallery](http://tangrams.github.io/ProceduralTextures/) for generative textures creaded completely with GLSL Shader code.
+Here at Mapzen, the [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es) ) are excited on the possibilities of using OpenGL Shading Language for rendering maps. We use them for everything in ours engines, from extrude OpenStreetMap polygons into 3D buildings, to apply different effects like light calculations and environmental maps. 
 
-## Install in local host
+Another powerful use of GLSL Shaders is to create procedural textures on the fly. This allow mappers to make interesting patterns programmatically and apply them on different geometry (like buildings, roads, parks, etc) using their own rules.
+
+This is a small collection of examples designed to inspire and help map makers to design and craft their own maps. [Here you can find the complete gallery](http://tangrams.github.io/ProceduralTextures/) ( and [source code of it](http://github.com/tangrams/ProceduralTextures) ) in case you want to contribute with your own designs.
+
+## How to install this gallery in your local machine?
 
 * Clone this repository locally and run a Python Simple HTTP Server.
 
@@ -14,15 +19,15 @@ python -m SimpleHTTPServer
 
 * Then open your WebBrowser on the address it said, usually at [http://localhost:8000/](http://localhost:8000)
 
-## Content
+## Gallery
 
-#### Shapes
+#### [Shapes](http://tangrams.github.io/ProceduralTextures/)
 
 <canvas onclick="viewShader('shapes/box.frag');" src="shapes/box.frag"></canvas>
 <canvas onclick="viewShader('shapes/circle.frag');" src="shapes/circle.frag"></canvas>
 <canvas onclick="viewShader('shapes/cross.frag');"  src="shapes/cross.frag"></canvas>
 
-#### Patterns
+#### [Patterns](http://tangrams.github.io/ProceduralTextures/)
 
 <canvas onclick="viewShader('patterns/grid.frag');" src="patterns/grid.frag"></canvas>
 <canvas onclick="viewShader('patterns/bricks.frag');" src="patterns/bricks.frag"></canvas>
@@ -32,7 +37,7 @@ python -m SimpleHTTPServer
 <canvas onclick="viewShader('patterns/nuts.frag');" src="patterns/nuts.frag"></canvas>
 
 
-#### Animations
+#### [Animations](http://tangrams.github.io/ProceduralTextures/)
 
 <canvas onclick="viewShader('animations/beatingdots.frag');" src="animations/beatingdots.frag"></canvas>
 <canvas onclick="viewShader('animations/movingdots.frag');" src="animations/movingdots.frag"></canvas>
