@@ -1,7 +1,7 @@
 # Procedural Textures
 by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
 
-The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es)) are excited about the possibilities of using the OpenGL Shading Language to render maps. We use them for everything from geometry extrusion to lighting effects. 
+The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es)) are excited about the possibilities of using the OpenGL Shading Language to render maps. As Peter and Brett describes in [this article](https://mapzen.com/blog/tangram-a-mapping-library), we use them for everything from geometry extrusion to lighting effects. That’s what makes tangram’s map engine fast, powerful and highly flexible. 
 
 Another use of GLSL Shaders is for generating procedural textures in real time. This allows mappers to make interesting patterns programmatically and apply them to different geometries using custom rules.
 
