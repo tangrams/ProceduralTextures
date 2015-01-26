@@ -1,15 +1,15 @@
 # Procedural Textures
 by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
 
-Here at Mapzen, the [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es) ) are excited on the possibilities of using OpenGL Shading Language for rendering maps. We use them for everything in ours engines, from extrude OpenStreetMap polygons into 3D buildings, to apply different effects like light calculations and environmental maps. 
+The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es) ) are excited on the possibilities of using OpenGL Shading Language for rendering maps. We use them on everything from geometry extrusion to light effects. 
 
-Another powerful use of GLSL Shaders is to create procedural textures on the fly. This allow mappers to make interesting patterns programmatically and apply them on different geometry (like buildings, roads, parks, etc) using their own rules.
+Another use of GLSL Shaders is for generating procedural textures on realtime. This allow mappers to make interesting patterns programmatically and apply them on different geometries  using custom rules.
 
-This is a small collection of examples designed to inspire and help map makers to design and craft their own maps. [Here you can find the complete gallery](http://tangrams.github.io/ProceduralTextures/) ( and [source code of it](http://github.com/tangrams/ProceduralTextures) ) in case you want to contribute with your own designs.
+This [repository](http://github.com/tangrams/ProceduralTextures) and [on-line gallery](http://tangrams.github.io/ProceduralTextures/) shows a small collection of examples to inspire map makers to use, code and share generative textures for maps.
 
 ## How to install this gallery in your local machine?
 
-* Clone this repository locally and run a Python Simple HTTP Server.
+* Clone this repository locally and run a Python HTTP Server.
 
 ```
 git clone https://github.com/tangrams/ProceduralTextures
