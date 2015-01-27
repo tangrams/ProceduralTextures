@@ -27,6 +27,7 @@ Note: in case you have Python 3.x as your default version you should use ```pyth
 
 <canvas onclick="viewShader('shapes/box.frag');" src="shapes/box.frag"></canvas>
 <canvas onclick="viewShader('shapes/circle.frag');" src="shapes/circle.frag"></canvas>
+<canvas onclick="viewShader('shapes/triangle.frag');" src="shapes/triangle.frag"></canvas>
 <canvas onclick="viewShader('shapes/cross.frag');"  src="shapes/cross.frag"></canvas>
 
 #### [Patterns](http://tangrams.github.io/ProceduralTextures/)

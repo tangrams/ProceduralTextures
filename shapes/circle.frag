@@ -1,4 +1,3 @@
-
 float circle(vec2 _st, float _radius){
 	vec2 pos = vec2(0.5)-_st;
 	_radius *= 0.75;
