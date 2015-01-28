@@ -107,3 +107,8 @@ code#demoCode{
     display: none;
 }
 
+pre#demoPre {
+    background:none;
+    border: 0 none;
+}
+
