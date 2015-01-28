@@ -188,7 +188,7 @@ function fetchHTTP(url, methood){
 			response = request.responseText;
 		}
 	}
-	request.open(methood ? methood : 'GET', url, true);
+	request.open(methood ? methood : 'GET', url, false);
 	request.send();
 	return response;
 }
