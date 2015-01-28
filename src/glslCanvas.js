@@ -216,7 +216,19 @@ function createShader( _gl, _source, _type) {
  *	Loads the vert/frag Shaders
  */
 function loadShader( _gl, _fragShaderURL ) {
-	var vertexShader = createShader(_gl, fetchHTTP("src/default.vert"), _gl.VERTEX_SHADER);
+	var vertexString = "precision mediump float;\n\
+\n\
+uniform vec2 u_resolution;\n\
+uniform float u_time;\n\
+attribute vec2 a_position;\n\
+attribute vec2 a_texcoord;\n\
+varying vec2 v_texcoord;\n\
+\n\
+void main() {\n\
+   gl_Position = vec4(a_position, 0.0, 1.0);\n\
+   v_texcoord = a_texcoord;\n\
+}";
+	var vertexShader = createShader(_gl, vertexString, _gl.VERTEX_SHADER);
 
 	var fragmentSource = fetchHTTP( _fragShaderURL );
 	var fragmentHeader = "precision mediump float;\n\
