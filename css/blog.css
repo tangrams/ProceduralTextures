@@ -63,7 +63,7 @@ pre#demoPre {
 }
 
 /* small mobile devices landscape */
-@media (min-width:322px) {
+@media (min-width:321px) {
     code#demoCode {
         display: inline;
         float: left;
@@ -75,9 +75,9 @@ pre#demoPre {
     canvas#demoCanvas {
         display: inline;
         float: right;
-        margin-top: -40px;
-        width: 250px;
-        height: 250px;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
     }
 }
 
