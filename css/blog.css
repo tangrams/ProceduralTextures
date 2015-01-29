@@ -51,7 +51,7 @@ pre#demoPre {
         width: 400px;
     }
     
-    canvas#demoCanvas{
+    canvas#demoCanvas {
         display: inline;
         float: right;
         margin-top: -40px;
@@ -61,7 +61,7 @@ pre#demoPre {
 }
 
 /* small mobile devices landscape */
-@media(max-width:767px){
+@media (min-width : 321px) {
     code#demoCode {
         display: inline;
         float: left;
@@ -70,7 +70,7 @@ pre#demoPre {
         width: 300px;
     }
 
-    canvas#demoCanvas{
+    canvas#demoCanvas {
         display: inline;
         float: right;
         margin-top: -40px;
@@ -80,11 +80,11 @@ pre#demoPre {
 }
 
 /* small mobile devices portait */
-@media(max-width:320px){
+@media (max-width:320px) {
     canvas#demoCanvas{
         display: inline;
-        width: 280px;
-        height: 280px;
-        padding-top: 20px;
+        width: 100px;
+        height: 100px;
+        margin-top: 60px;
     }
 }
