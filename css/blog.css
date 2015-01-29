@@ -63,7 +63,7 @@ pre#demoPre {
 }
 
 /* small mobile devices portait */
-@media (min-width:320px) {
+@media (max-width:768px) {
     canvas#demoCanvas {
         display: inline;
         float: left;
