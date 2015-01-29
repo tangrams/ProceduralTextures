@@ -66,12 +66,12 @@ pre#demoPre {
     }
 }
 
-/* small mobile devices */
+/* small mobile devices landscape */
 @media(max-width:767px){
     code#demoCode {
         display: inline;
         float: left;
-        font-size: 90%;
+        font-size: 120%;
         padding-left: 20px;
         width: 300px;
     }
@@ -80,6 +80,15 @@ pre#demoPre {
         display: inline;
         float: right;
         margin-top: -40px;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* small mobile devices landscape */
+@media(max-width:477px){
+    canvas#demoCanvas{
+        display: inline;
         width: 250px;
         height: 250px;
     }
