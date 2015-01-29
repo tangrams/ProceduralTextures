@@ -44,7 +44,7 @@ pre#demoPre {
 }
 
 /* small mobile devices */
-@media (max-width:320px) {
+@media (min-width:320px) {
     canvas#demoCanvas {
         display: inline;
         float: left;
