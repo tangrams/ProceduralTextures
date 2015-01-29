@@ -31,6 +31,7 @@ canvas:hover {
     width: 100%;
     height: 100%;
     background-color: #3f3f3f;
+    padding-bottom: 20px;
 }
 
 .demo{
@@ -62,7 +63,7 @@ pre#demoPre {
 }
 
 /* small mobile devices landscape */
-@media (min-width : 321px) {
+@media (min-width:322px) {
     code#demoCode {
         display: inline;
         float: left;
