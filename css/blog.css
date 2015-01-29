@@ -85,8 +85,8 @@ pre#demoPre {
     }
 }
 
-/* small mobile devices landscape */
-@media(max-width:477px){
+/* small mobile devices portait */
+@media(max-width:320){
     canvas#demoCanvas{
         display: inline;
         width: 250px;
