@@ -67,9 +67,9 @@ pre#demoPre {
     canvas#demoCanvas {
         display: inline;
         float: left;
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         margin-top: 20px;
-        margin-left: 40px;
+        margin-left: 20px;
     }
 }
