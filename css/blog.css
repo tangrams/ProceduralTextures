@@ -54,18 +54,6 @@ pre#demoPre {
     }
 }
 
-/* tablets */
-@media (max-width:767px) {
-    canvas#demoCanvas {
-        display: inline;
-        float: right;
-        width: 300px;
-        height: 300px;
-        margin-left: 20px;
-        margin-top: -20px;
-    }
-}
-
 @media (min-width: 768px) {
     canvas#demoCanvas {
         display: inline;
