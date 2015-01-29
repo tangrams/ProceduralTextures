@@ -44,7 +44,7 @@ pre#demoPre {
 }
 
 /* small mobile devices */
-@media (max-width:767px) {
+@media (max-width:320px) {
     canvas#demoCanvas {
         display: inline;
         float: left;
@@ -55,6 +55,17 @@ pre#demoPre {
 }
 
 /* tablets */
+@media (max-width:767px) {
+    canvas#demoCanvas {
+        display: inline;
+        float: right;
+        width: 300px;
+        height: 300px;
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+}
+
 @media (min-width: 768px) {
     canvas#demoCanvas {
         display: inline;
