@@ -64,12 +64,12 @@ pre#demoPre {
 
 /* small mobile devices portait */
 @media (max-width:320px) {
-    canvas#demoCanvas{
+    canvas#demoCanvas {
         display: inline;
         float: left;
-        width: 300px;
-        height: 300px;
-        margin-top: 40px;
-        margin-left: 20px;
+        width: 400px;
+        height: 400px;
+        margin-top: 20px;
+        margin-left: 40px;
     }
 }
