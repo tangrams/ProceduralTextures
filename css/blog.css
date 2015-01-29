@@ -48,9 +48,9 @@ pre#demoPre {
     code#demoCode {
         display: inline;
         float: left;
-        font-size: 90%;
+        font-size: 100%;
         padding-left: 20px;
-        width: 400px;
+        width: 100%;
     }
     
     canvas#demoCanvas {
