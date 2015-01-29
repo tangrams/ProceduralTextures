@@ -22,27 +22,8 @@ canvas {
 canvas:hover {
     border: 4px solid #6ea0a4;
 }
-
-canvas#demoCanvas{
-    /*position: absolute;*/
-    /*right: 10px;*/
-    display: inline;
-    float: right;
-    margin-top: -40px;
-    width: 400px;
-    height: 400px;
-}
 .clearfix {
     clear:both;
-}
-code#demoCode{
-    display: inline;
-    float: left;
-    /*position: absolute;*/
-    /*left:0px;*/
-    /*right:0px;*/
-    font-size: 90%;
-    padding-left: 20px;
 }
 
 #demo{
@@ -64,4 +45,42 @@ code#demoCode{
 pre#demoPre {
     background:none;
     border: 0 none;
+}
+
+/* tablets */
+@media (min-width: 768px) {
+    code#demoCode {
+        display: inline;
+        float: left;
+        font-size: 90%;
+        padding-left: 20px;
+        width: 400px;
+    }
+    
+    canvas#demoCanvas{
+        display: inline;
+        float: right;
+        margin-top: -40px;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* small mobile devices */
+@media(max-width:767px){
+    code#demoCode {
+        display: inline;
+        float: left;
+        font-size: 90%;
+        padding-left: 20px;
+        width: 300px;
+    }
+
+    canvas#demoCanvas{
+        display: inline;
+        float: right;
+        margin-top: -40px;
+        width: 250px;
+        height: 250px;
+    }
 }
