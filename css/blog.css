@@ -43,16 +43,16 @@ pre#demoPre {
     border: 0 none;
 }
 
-/* tablets */
-@media (min-width: 768px) {
-    code#demoCode {
+code#demoCode {
         display: inline;
         float: left;
         font-size: 100%;
         padding-left: 20px;
         width: 100%;
-    }
-    
+}
+
+/* tablets */
+@media (min-width: 768px) {
     canvas#demoCanvas {
         display: inline;
         float: right;
