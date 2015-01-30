@@ -14,38 +14,9 @@ This [repository](http://github.com/tangrams/ProceduralTextures) and [on-line ga
 ```
 git clone https://github.com/tangrams/ProceduralTextures
 cd ProceduralTextures
-python -m SimpleHTTPServer
+python -m SimpleHTTPServer 8000
 ```
 
-Note: in case you have Python 3.x as your default version you should use ```python -m http.server``` instead.
+Note: in case you have Python 3.x as your default version you should use ```python -m http.server 8000``` instead.
 
-* Then open your web browser to [http://localhost:8000/](http://localhost:8000) (or the URL specified by the Python script, if different).
-
-## Gallery
-
-#### [Shapes](http://tangrams.github.io/ProceduralTextures/)
-
-<canvas onclick="viewShader('shapes/box.frag');" src="shapes/box.frag"></canvas>
-<canvas onclick="viewShader('shapes/circle.frag');" src="shapes/circle.frag"></canvas>
-<canvas onclick="viewShader('shapes/triangle.frag');" src="shapes/triangle.frag"></canvas>
-<canvas onclick="viewShader('shapes/cross.frag');"  src="shapes/cross.frag"></canvas>
-
-#### [Tile patterns](http://tangrams.github.io/ProceduralTextures/)
-<canvas onclick="viewShader('patterns/grid.frag');" src="patterns/grid.frag"></canvas>
-<canvas onclick="viewShader('patterns/bricks.frag');" src="patterns/bricks.frag"></canvas>
-<canvas onclick="viewShader('patterns/rotTile.frag');" src="patterns/rotTile.frag"></canvas>
-<canvas onclick="viewShader('shapes/wave.frag');" src="shapes/wave.frag"></canvas>
-
-#### [Patterns Desgins](http://tangrams.github.io/ProceduralTextures/)
-
-<canvas onclick="viewShader('patterns/sidegrid.frag');" src="patterns/sidegrid.frag"></canvas>
-<canvas onclick="viewShader('patterns/checks.frag');" src="patterns/checks.frag"></canvas>
-<canvas onclick="viewShader('patterns/diamond.frag');" src="patterns/diamond.frag"></canvas>
-<canvas onclick="viewShader('patterns/nuts.frag');" src="patterns/nuts.frag"></canvas>
-
-
-#### [Animations](http://tangrams.github.io/ProceduralTextures/)
-
-<canvas onclick="viewShader('animations/movingdots.frag');" src="animations/movingdots.frag"></canvas>
-<canvas onclick="viewShader('animations/rotatingdots.frag');" src="animations/rotatingdots.frag"></canvas>
-<canvas onclick="viewShader('animations/marchingboxes.frag');" src="animations/marchingboxes.frag"></canvas>
+* Then open your web browser to [http://localhost:8000/](http://localhost:8000).

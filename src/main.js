@@ -1,18 +1,12 @@
-window.addEventListener("hashchange", function () {
-	loadMarkdown();
-	loadShaders();
-}, false);
-
 function parseMarkdown(){
-	var mdFileURL = window.location.hash.substr(1);
-	
-	var mdText = "No **text**";
-	if(mdFileURL){
-		mdText = fetchHTTP(mdFileURL);
-	} else {
-		mdText = fetchHTTP("README.md");
-	}
-	content.innerHTML = marked(mdText);
+
+	// var mdText = "No **text**";
+	// if(mdFileURL){
+	// 	mdText = fetchHTTP(mdFileURL);
+	// } else {
+	// 	mdText = fetchHTTP("README.md");
+	// }
+	// content.innerHTML = marked(mdText);
 
 	// Load codes tags that have "src" attributes
 	var list = document.getElementsByTagName("code");
@@ -46,7 +40,7 @@ function viewShader (fragShaderURL) {
 
     document.getElementById("demo").style.display = 'block';
     
-    smoothScroll('end');
+    smoothScroll('demo');
     loadShaders();
 };
 

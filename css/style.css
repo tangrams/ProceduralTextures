@@ -78,6 +78,7 @@ canvas#demoCanvas{
     width: 400px;
     height: 400px;
 }
+
 .clearfix {
     clear:both;
 }
