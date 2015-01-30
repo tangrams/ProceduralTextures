@@ -1,5 +1,4 @@
 # Procedural Textures
-<p style="text-align: right; font-size: 14px;">by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo) at [Mapzen](https://mapzen.com/)</p>
 
 The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es)) are excited about the possibilities of using the OpenGL Shading Language to render maps. As Brett and Peter describe in [this article](https://mapzen.com/blog/tangram-a-mapping-library), we use them for everything from geometry extrusion to lighting effects. That’s what makes Tangram’s map engine fast, powerful and highly flexible. 
 
