@@ -1,5 +1,5 @@
 # Procedural Textures
-by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
+<p style="text-align: right; font-size: 14px;">by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo) at [Mapzen](https://mapzen.com/)</p>
 
 The [Tangrams](https://github.com/tangrams) teams ([web](https://github.com/tangrams/tangram) and [native](https://github.com/tangrams/tangram-es)) are excited about the possibilities of using the OpenGL Shading Language to render maps. As Brett and Peter describe in [this article](https://mapzen.com/blog/tangram-a-mapping-library), we use them for everything from geometry extrusion to lighting effects. That’s what makes Tangram’s map engine fast, powerful and highly flexible. 
 
@@ -30,10 +30,14 @@ Note: in case you have Python 3.x as your default version you should use ```pyth
 <canvas onclick="viewShader('shapes/triangle.frag');" src="shapes/triangle.frag"></canvas>
 <canvas onclick="viewShader('shapes/cross.frag');"  src="shapes/cross.frag"></canvas>
 
-#### [Patterns](http://tangrams.github.io/ProceduralTextures/)
-
+#### [Tile patterns](http://tangrams.github.io/ProceduralTextures/)
 <canvas onclick="viewShader('patterns/grid.frag');" src="patterns/grid.frag"></canvas>
 <canvas onclick="viewShader('patterns/bricks.frag');" src="patterns/bricks.frag"></canvas>
+<canvas onclick="viewShader('patterns/rotTile.frag');" src="patterns/rotTile.frag"></canvas>
+<canvas onclick="viewShader('shapes/wave.frag');" src="shapes/wave.frag"></canvas>
+
+#### [Patterns Desgins](http://tangrams.github.io/ProceduralTextures/)
+
 <canvas onclick="viewShader('patterns/sidegrid.frag');" src="patterns/sidegrid.frag"></canvas>
 <canvas onclick="viewShader('patterns/checks.frag');" src="patterns/checks.frag"></canvas>
 <canvas onclick="viewShader('patterns/diamond.frag');" src="patterns/diamond.frag"></canvas>
@@ -42,8 +46,6 @@ Note: in case you have Python 3.x as your default version you should use ```pyth
 
 #### [Animations](http://tangrams.github.io/ProceduralTextures/)
 
-<canvas onclick="viewShader('animations/beatingdots.frag');" src="animations/beatingdots.frag"></canvas>
 <canvas onclick="viewShader('animations/movingdots.frag');" src="animations/movingdots.frag"></canvas>
-<canvas onclick="viewShader('animations/polardots.frag');" src="animations/polardots.frag"></canvas>
 <canvas onclick="viewShader('animations/rotatingdots.frag');" src="animations/rotatingdots.frag"></canvas>
 <canvas onclick="viewShader('animations/marchingboxes.frag');" src="animations/marchingboxes.frag"></canvas>
