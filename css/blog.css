@@ -15,6 +15,7 @@ canvas {
     width: 100px;
     height: 100px;
     margin-right: 20px;
+    margin-bottom: 20px;
     border: 4px solid #000;
     border-radius: 6px;
 }
@@ -22,39 +23,15 @@ canvas {
 canvas:hover {
     border: 4px solid #6ea0a4;
 }
-
-canvas#demoCanvas{
-    /*position: absolute;*/
-    /*right: 10px;*/
-    display: inline;
-    float: right;
-    margin-top: -40px;
-    width: 400px;
-    height: 400px;
-}
 .clearfix {
     clear:both;
 }
-code#demoCode{
-    display: inline;
-    float: left;
-    /*position: absolute;*/
-    /*left:0px;*/
-    /*right:0px;*/
-    font-size: 90%;
-    padding-left: 20px;
-}
 
 #demo{
-/*    position: absolute;
-    left:0px;
-    right:0px;
-    width: 100%;
-    height: 700px;*/
     width: 100%;
     height: 100%;
     background-color: #3f3f3f;
-    /*opacity: 50%;*/
+    padding-bottom: 20px;
 }
 
 .demo{
@@ -64,4 +41,33 @@ code#demoCode{
 pre#demoPre {
     background:none;
     border: 0 none;
+}
+
+/* small mobile devices */
+@media (min-width:320px) {
+    canvas#demoCanvas {
+        display: inline;
+        float: left;
+        width: 300px;
+        height: 300px;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    canvas#demoCanvas {
+        display: inline;
+        float: right;
+        margin-top: -40px;
+        width: 300px;
+        height: 300px;
+    }
+    
+    code#demoCode {
+        display: inline;
+        float: left;
+        font-size: 100%;
+        padding-left: 20px;
+        width: 400px;
+    }
 }
